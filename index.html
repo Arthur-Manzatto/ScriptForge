@@ -1,33 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.6.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <title>Linux Setup Generator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+
+    <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+
+    <title>Linux</title>
 </head>
 <body>
+    <header > <!--Inicio header-->
+        <nav class="navbar navbar-expand-md navbar-dark  fixed-top nav-custom">
+            <div class="container">
+                 <a href="index.html" class="navbar-brand">
+                    <i class="bi bi-tux" style="font-size: 2em;"></i>
+                 </a>
+                 <button class="navbar-toggler " data-toggle="collapse" data-target="#principal">
+                    <span class="navbar-toggler-icon " ></span>
+                 </button>
+                 <div class="collapse navbar-collapse" id="principal">
+                    <ul class="navbar-nav ml-auto justify-content-between" style="gap: 1.5rem;">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">HOME</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">SOBRE</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">CHECKLIST</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="" class="nav-link">INTEGRANTES</a>
+                        </li>
 
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="mySwitchv" value="vscode">
-        <label class="custom-control-label" for="mySwitch">VS Code</label>
-    </div>
+                    </ul>
+                 </div>
+            </div>
+        </nav>
+    </header> <!--Fim header-->
 
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="mySwitchg" value="google">
-        <label class="custom-control-label" for="mySwitch">Google</label>
-    </div>
+    <section id="home" class="d-flex">
+        <div class="container " >
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <h1>Titulo do trabalho</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex eaque illo odit exercitationem id consequuntur facere ipsam, iusto nam incidunt tempore quidem quisquam, repellendus iure aut. Id exercitationem consequuntur nostrum! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius delectus suscipit mollitia laboriosam dignissimos ullam rem non labore exercitationem esse aspernatur ipsa vero adipisci, odio repellendus facere in quis facilis?</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="custom-control custom-switch">
-        <input type="checkbox" class="custom-control-input" id="mySwitchs" value="spotify">
-        <label class="custom-control-label" for="mySwitch">Spotify</label>
-    </div>
 
-    <button type="button" onclick="generate()">GENERATE SCRIPT</button>
+    <section id="checklist">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="custom-control custom-switch mb-2">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">Opção 1</label>
+                    </div>
+                    <div class="custom-control custom-switch mb-2">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">Opção 1</label>
+                    </div>
+                    <div class="custom-control custom-switch mb-2">
+                        <input type="checkbox" class="custom-control-input" id="switch2">
+                        <label class="custom-control-label" for="switch2">Opção 1</label>
+                    </div>
+                    <div class="custom-control custom-switch mb-2">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">Opção 1</label>
+                    </div>
+                    <div class="custom-control custom-switch mb-2">
+                        <input type="checkbox" class="custom-control-input" id="switch1">
+                        <label class="custom-control-label" for="switch1">Opção 1</label>
+                    </div>
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+                <div class="col-md-4">
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+     <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
 </body>
-<script src="script.js"></script>
 </html>
