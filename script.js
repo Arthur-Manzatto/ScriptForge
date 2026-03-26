@@ -79,7 +79,7 @@ function renderApps(apps, sectionId) {
                     <span class="ml-3">${app.name}</span>
                 </label>
         </div>
-        <img src="https://img.logo.dev/${app.logo}?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=40&retina=true" alt="${app.name} logo">
+        <img src="./img/${app.id}.svg" class="img-fluid" style="max-width: 20px;" alt="${app.name} logo">
     </div>
     `;
   });
