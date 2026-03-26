@@ -76,9 +76,9 @@ function renderApps(apps, sectionId) {
         <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="${app.id}" value="${app.id}">
                 <label class="custom-control-label" for="${app.id}">
-                    <span class="ml-3">${app.name}</span>
                 </label>
         </div>
+        <span class="text-white ml-3">${app.name}</span>
         <img src="./img/${app.id}.svg" class="img-fluid" style="max-width: 20px;" alt="${app.name} logo">
     </div>
     `;
