@@ -20,7 +20,7 @@ const apps_dev = [
   { id: "rust",        name: "Rust",            logo: "name/rust" },
   { id: "java",        name: "Java JDK",      logo: "java.com" },
   { id: "php",         name: "PHP",             logo: "name/php" },
-  { id: "postgre",     name: "PostgreSQL",      logo: "name/postgresql" },
+  { id: "postgresql",  name: "PostgreSQL",      logo: "name/postgresql" },
   { id: "mysql",       name: "MySQL",           logo: "name/mysql" },
   { id: "tmux",        name: "Tmux",            logo: "name/tmux" },
   { id: "zsh",         name: "Zsh",             logo: "name/zsh" },
@@ -29,8 +29,8 @@ const apps_dev = [
 
 const apps_productivity = [
 
-  { id: "libre",       name: "LibreOffice",     logo: "name/LibreOffice" },
-  { id: "only",        name: "OnlyOffice",      logo: "name/onlyOffice" },
+  { id: "libreoffice", name: "LibreOffice",     logo: "name/LibreOffice" },
+  { id: "onlyoffice",  name: "OnlyOffice",      logo: "name/onlyOffice" },
   { id: "okular",      name: "Okular",          logo: "name/okular" },
   { id: "obsidian",    name: "Obsidian",        logo: "name/obsidian" },
 
