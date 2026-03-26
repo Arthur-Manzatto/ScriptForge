@@ -41,6 +41,7 @@
                         <li class="nav-item">
                             <a href="" class="nav-link">INTEGRANTES</a>
                         </li>
+                        <button type="button" onclick="generate()">GENERATE</button>
 
                     </ul>
                  </div>
@@ -64,371 +65,58 @@
 
     <section id="checklist">
         <div class="container">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2>NAVEGADORES</h2>
-                </div>
-                <div class="col-md-12 d-flex flex-wrap  custom-section mb-4"> <!--browsers-->
+            
+                <section id="browsers">
+                    <div class="col-md-12 text-center">
+                        <h2>NAVEGADORES</h2>
+                    </div>
+                    <div class="col-md-12 d-flex flex-wrap  custom-section" id="browsers-section"> <!--browsers-->
                     
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="firefox">
-                        <label class="custom-control-label " for="firefox" >
-                            <span class="text-white ml-3"> Firefox </span>
-                            <img src="https://img.logo.dev/name/firefox?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class=" rounded-lg" alt="">
-                            
-
-                        </label>
+                    </div> <!--Fim browsers-->
+                </section>
+            
+                <section id="development">
+                    <div class="col-md-12 text-center">
+                        <h2>DESENVOLVIMENTO</h2>
                     </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="chrome">
-                        <label class="custom-control-label " for="chrome" >
-                            <img src="https://img.logo.dev/name/google%20chrome?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Chrome </span>
-
-                        </label>
+                    <div class="col-md-12 d-flex flex-wrap  custom-section " id="dev-section"> <!--Desenvolvimento-->
+                        
+                        
+                    </div> <!--Fim desenvolvimento-->
+                </section>
+                <section id="productivity">
+                    <div class="col-md-12 text-center">
+                        <h2>PRODUTIVIDADE</h2>
                     </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="brave">
-                        <label class="custom-control-label " for="brave" >
-                            <img src="https://img.logo.dev/name/brave?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Brave </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="opera">
-                        <label class="custom-control-label " for="opera" >
-                            <img src="https://img.logo.dev/name/opera?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Opera </span>
-
-                        </label>
-                    </div>
-                  
-                   
-                </div> <!--Fim browsers-->
-                <div class="col-md-12 text-center">
-                    <h2>DESENVOLVIMENTO</h2>
-                </div>
-                <div class="col-md-12 d-flex flex-wrap  custom-section mb-4"> <!--Desenvolvimento-->
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="vscode">
-                        <label class="custom-control-label " for="vscode" >
-                            <img src="https://img.logo.dev/name/vs%20code?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Vs Code </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="jetbrains">
-                        <label class="custom-control-label " for="jetbrains" >
-                            <img src="https://img.logo.dev/name/jetBrains%20toolbox?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> JetBrains  </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="git">
-                        <label class="custom-control-label " for="git" >
-                            <img src="https://img.logo.dev/name/git?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Git </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="nodejs">
-                        <label class="custom-control-label " for="nodejs" >
-                            <img src="https://img.logo.dev/name/node%20js?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Node.js </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="python">
-                        <label class="custom-control-label " for="python" >
-                            <img src="https://img.logo.dev/name/python%203?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Python 3 </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="docker">
-                        <label class="custom-control-label " for="docker" >
-                            <img src="https://img.logo.dev/name/docker?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Docker </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="neovim">
-                        <label class="custom-control-label " for="neovim" >
-                            <img src="https://img.logo.dev/name/neovim?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Neovim </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="go">
-                        <label class="custom-control-label " for="go" >
-                            <img src="https://img.logo.dev/name/go?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Go </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="rust">
-                        <label class="custom-control-label " for="rust" >
-                            <img src="https://img.logo.dev/name/rust?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Rust </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="java">
-                        <label class="custom-control-label " for="java" >
-                            <img src="https://img.logo.dev/java.com?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Java(JDK) </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="php">
-                        <label class="custom-control-label " for="php" >
-                            <img src="https://img.logo.dev/name/php?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> PHP </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="postgre">
-                        <label class="custom-control-label " for="postgre" >
-                            <img src="https://img.logo.dev/name/postgresql?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> PostgreSQL </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="mysql">
-                        <label class="custom-control-label " for="mysql" >
-                            <img src="https://img.logo.dev/name/mysql?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> MySQL </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="tmux">
-                        <label class="custom-control-label " for="tmux" >
-                            <img src="https://img.logo.dev/name/tmux?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Tmux </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="zsh">
-                        <label class="custom-control-label " for="zsh" >
-                            <img src="https://img.logo.dev/name/zsh?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Zsn </span>
-
-                        </label>
-                    </div>
-                    
-                </div> <!--Fim desenvolvimento-->
-                <div class="col-md-12 text-center">
-                    <h2>PRODUTIVIDADE</h2>
-                </div>
-                <div class="col-md-12 d-flex flex-wrap custom-section mb-4"> <!--Produtividade-->
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="libre">
-                        <label class="custom-control-label " for="libre" >
-                            <img src="https://img.logo.dev/name/LibreOffice?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> LibreOffice </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="only">
-                        <label class="custom-control-label " for="only" >
-                            <img src="https://img.logo.dev/name/onlyOffice?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> OnlyOffice </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="okular">
-                        <label class="custom-control-label " for="okular" >
-                            <img src="https://img.logo.dev/name/okular?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Okular </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="obsidian">
-                        <label class="custom-control-label " for="obsidian" >
-                            <img src="https://img.logo.dev/name/obsidian?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Obsidian </span>
-
-                        </label>
-                    </div>
-                </div> <!--Fim produtividade-->
-                <div class="col-md-12 text-center">
-                    <h2>MULTIMÍDIA</h2>
-                </div> 
-                <div class="col-md-12 d-flex flex-wrap custom-section mb-4"> <!--multimidia-->
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="vlc">
-                        <label class="custom-control-label " for="vlc" >
-                            <img src="https://img.logo.dev/name/vlc?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> VLC </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="gimp">
-                        <label class="custom-control-label " for="gimp" >
-                            <img src="https://img.logo.dev/name/gimp?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> GIMP </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="obsstudio">
-                        <label class="custom-control-label " for="obsstudio" >
-                            <img src="https://img.logo.dev/obsproject.com?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> OBS Studio </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="kdenlive">
-                        <label class="custom-control-label " for="kdenlive" >
-                            <img src="https://img.logo.dev/kdenlive.org?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Kdenlive </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="audacity">
-                        <label class="custom-control-label " for="audacity" >
-                            <img src="https://img.logo.dev/audacityteam.org?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Audacity </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="inkscape">
-                        <label class="custom-control-label " for="inkscape" >
-                            <img src="https://img.logo.dev/name/inkscape?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Inkscape </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="blender">
-                        <label class="custom-control-label " for="blender" >
-                            <img src="https://img.logo.dev/name/blender?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Blender </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="krita">
-                        <label class="custom-control-label " for="krita" >
-                            <img src="https://img.logo.dev/name/vlc?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Krita </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="handbrake">
-                        <label class="custom-control-label " for="handbrake" >
-                            <img src="https://img.logo.dev/name/vlc?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> HandBrake </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="spotify">
-                        <label class="custom-control-label " for="spotify" >
-                            <img src="https://img.logo.dev/name/spotify?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Spotify </span>
-
-                        </label>
-                    </div>
-                </div> <!--Fim multimidia--> 
-                <div class="col-md-12 text-center">
-                    <h2>SEGURANÇA</h2>
-                </div> 
-                <div class="col-md-12 d-flex flex-wrap custom-section mb-4"> <!--Segurança-->
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="clamav">
-                        <label class="custom-control-label " for="clamav" >
-                            <img src="https://img.logo.dev/clamav.net?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> ClamAV </span>
-
-                        </label>
-                    </div>
-                    <div class="custom-control custom-switch mb-2 col-md-2"> <!--coloquei a logo da ubunto pois foi a unica referencia de logo que achei -->
-                        <input type="checkbox" class="custom-control-input " id="ufw">
-                        <label class="custom-control-label " for="ufw" >
-                            <img src="https://img.logo.dev/name/ubuntu?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> UFW </span>
-
-                        </label>
+                    <div class="col-md-12 d-flex flex-wrap custom-section" id="productivity-section"> <!--Produtividade-->
+                        
+                    </div> <!--Fim produtividade-->
+                </section>
+                <section id="multimedia">
+                    <div class="col-md-12 text-center">
+                        <h2>MULTIMÍDIA</h2>
                     </div> 
-                    <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="wireshark">
-                        <label class="custom-control-label " for="wireshark" >
-                            <img src="https://img.logo.dev/wireshark.org?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Wireshark </span>
-
-                        </label>
-                    </div>
-                </div> <!--Fim segurança-->
-                <div class="col-md-12 text-center">
-                    <h2>COMUNICAÇÃO</h2>
-                </div> 
-                <div class="col-md-12 d-flex flex-wrap custom-section mb-4"> <!--comunicação-->
-                     <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="discord">
-                        <label class="custom-control-label " for="discord" >
-                            <img src="https://img.logo.dev/name/discord?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Discord </span>
-
-                        </label>
-                    </div>
-                     <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="telegram">
-                        <label class="custom-control-label " for="telegram" >
-                            <img src="https://img.logo.dev/name/telegram?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Telegram </span>
-
-                        </label>
-                    </div>
-                     <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="zoom">
-                        <label class="custom-control-label " for="zoom" >
-                            <img src="https://img.logo.dev/zoom.us?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Zoom </span>
-
-                        </label>
-                    </div>
-                     <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="thunderbird">
-                        <label class="custom-control-label " for="thunderbird" >
-                            <img src="https://img.logo.dev/thunderbird.net?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> ThunderBird </span>
-
-                        </label>
-                    </div>
-                     <div class="custom-control custom-switch mb-2 col-md-2">
-                        <input type="checkbox" class="custom-control-input " id="signal">
-                        <label class="custom-control-label " for="signal" >
-                            <img src="https://img.logo.dev/name/signal?token=pk_ETBv29ZDQqmR3LZLxgvV_g&size=20&retina=true" class="ml-3 rounded-lg" alt="">
-                            <span class="text-white"> Signal </span>
-
-                        </label>
-                    </div>
-                </div> <!--Fim comunicação-->
-            </div>
+                    <div class="col-md-12 d-flex flex-wrap custom-section" id="multimedia-section"> <!--multimidia-->
+                        
+                    </div> <!--Fim multimidia--> 
+                </section>
+                <section id="security">
+                    <div class="col-md-12 text-center">
+                        <h2>SEGURANÇA</h2>
+                    </div> 
+                    <div class="col-md-12 d-flex flex-wrap custom-section" id="security-section"> <!--Segurança-->
+                        
+                    </div> <!--Fim segurança-->
+                </section>
+                <section id="communication">
+                    <div class="col-md-12 text-center">
+                        <h2>COMUNICAÇÃO</h2>
+                    </div> 
+                    <div class="col-md-12 d-flex flex-wrap custom-section mb-4" id="communication-section"> <!--comunicação-->
+                        
+                    </div> <!--Fim comunicação-->
+                </section>
+            
         </div>
     </section>
 
@@ -440,6 +128,7 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
      <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
