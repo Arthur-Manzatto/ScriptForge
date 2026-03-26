@@ -73,6 +73,7 @@ h2{
     border-radius: 20px;
     gap: 45px;
     width: 100%;
+    margim-bottom: 16px;
 }
 
 #checklist {
