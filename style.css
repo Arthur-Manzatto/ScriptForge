@@ -156,7 +156,7 @@ h2{
 .app-card .custom-control-label {
     display: flex;
     align-items: center;
-    padding-left: 3.2rem;
+    padding-left: 3rem;
     line-height: 1;
     margin-bottom: 0;
 }

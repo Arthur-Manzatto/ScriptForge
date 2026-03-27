@@ -1,28 +1,75 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools --><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 128 128" version="1.1" preserveAspectRatio="xMidYMid meet">
-    <title>Wireshark Logo Icon</title>
-    <desc>This is shape (source) for Clarity vector icon theme for gtk</desc>
-    <metadata>
-        <rdf:RDF>
-            <cc:Work rdf:about="">
-                <dc:title>Wireshark Logo Icon</dc:title>
-                <dc:description>This is shape (source) for Clarity vector icon theme for gtk</dc:description>
-                <dc:creator>
-                    <cc:Agent>
-                        <dc:title>Jakub Jankiewicz</dc:title>
-                    </cc:Agent>
-                </dc:creator>
-                <dc:rights>
-                    <cc:Agent>
-                        <dc:title>Jakub Jankiewicz</dc:title>
-                    </cc:Agent>
-                </dc:rights>
-                <dc:date>2010</dc:date>
-                <dc:format>image/svg+xml</dc:format>
-                <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-                <cc:license rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/"/>
-             </cc:Work>
-        </rdf:RDF>
-    </metadata>
-    <path d="m 17.28125,5.4375 c -2.682851,0 -4.84375,2.203877 -4.84375,4.90625 l 0,98 c 0,2.70237 2.160899,4.9375 4.84375,4.9375 l 98.125,0 c 2.68285,0 4.875,-2.23513 4.875,-4.9375 l 0,-98 c 0,-2.702373 -2.19215,-4.90625 -4.875,-4.90625 z m 2.75,5.25 92.625,0 c 1.30678,0 2.34375,1.036968 2.34375,2.34375 L 115,88.5 93.26414,88.5 C 87.163071,80.072001 79.909795,51.960723 91.13914,29.59375 67.423056,29.191483 40.07533,59.3572 40.0625,88.5 l -22.375,0 0,-75.46875 c 0,-1.306782 1.036968,-2.34375 2.34375,-2.34375 z"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="128"
+   height="128"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="wireshark.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="6.3046875"
+     inkscape:cx="64"
+     inkscape:cy="64"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <title
+     id="title1">Wireshark Logo Icon</title>
+  <desc
+     id="desc1">This is shape (source) for Clarity vector icon theme for gtk</desc>
+  <metadata
+     id="metadata1">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>Wireshark Logo Icon</dc:title>
+        <dc:description>This is shape (source) for Clarity vector icon theme for gtk</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Jakub Jankiewicz</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Jakub Jankiewicz</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <dc:date>2010</dc:date>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <cc:license
+           rdf:resource="http://creativecommons.org/licenses/by-sa/3.0/" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     d="m 17.28125,5.4375 c -2.682851,0 -4.84375,2.203877 -4.84375,4.90625 l 0,98 c 0,2.70237 2.160899,4.9375 4.84375,4.9375 l 98.125,0 c 2.68285,0 4.875,-2.23513 4.875,-4.9375 l 0,-98 c 0,-2.702373 -2.19215,-4.90625 -4.875,-4.90625 z m 2.75,5.25 92.625,0 c 1.30678,0 2.34375,1.036968 2.34375,2.34375 L 115,88.5 93.26414,88.5 C 87.163071,80.072001 79.909795,51.960723 91.13914,29.59375 67.423056,29.191483 40.07533,59.3572 40.0625,88.5 l -22.375,0 0,-75.46875 c 0,-1.306782 1.036968,-2.34375 2.34375,-2.34375 z"
+     id="path1" />
+  <path
+     style="fill:#ffffff;stroke-width:0.158612"
+     d="m 15.624089,112.89367 c -1.034864,-0.3659 -2.404778,-1.78831 -2.790761,-2.89772 -0.295729,-0.84999 -0.302969,-2.06285 -0.302969,-50.754314 V 9.3581165 L 12.942927,8.4785121 C 13.51234,7.2645125 14.216781,6.5147435 15.277267,5.9939665 L 16.178439,5.551425 h 50.121437 50.121434 l 0.87237,0.4144219 c 1.04543,0.496638 1.9268,1.3521886 2.41622,2.3454523 l 0.35949,0.729593 V 59.400248 109.7596 l -0.35785,0.6697 c -0.53339,0.9982 -1.18742,1.67203 -2.12937,2.19382 l -0.84363,0.46734 -50.200746,0.0276 c -45.516686,0.0251 -50.267267,0.004 -50.913705,-0.22443 z M 40.208178,86.958136 c 0,-5.61261 1.791023,-13.360414 4.620889,-19.989556 4.940843,-11.574239 13.443274,-22.247201 23.15546,-29.06667 7.271209,-5.105523 15.365834,-8.162133 21.61526,-8.162133 h 1.370725 l -0.322911,0.632958 c -0.177601,0.348126 -0.652912,1.436602 -1.056249,2.418835 -2.086235,5.080555 -3.274676,9.843904 -4.046739,16.219582 -0.330583,2.729941 -0.280993,12.359217 0.07923,15.385378 1.115327,9.369565 3.802778,18.319797 7.002948,23.322468 l 0.553901,0.865884 h 10.947178 10.94717 l -0.0406,-38.213903 -0.0406,-38.213904 -0.32702,-0.438006 c -0.17986,-0.240903 -0.52413,-0.585167 -0.76504,-0.765031 l -0.43801,-0.327024 H 66.407206 c -45.000207,0 -47.079357,0.01247 -47.579028,0.285271 -0.287377,0.1569 -0.661832,0.513777 -0.832121,0.793061 -0.304814,0.499911 -0.309626,1.10023 -0.31021,38.693663 l -5.93e-4,38.185873 h 11.261462 11.261462 z"
+     id="path2" />
 </svg>

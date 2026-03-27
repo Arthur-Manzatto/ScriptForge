@@ -1,17 +1,56 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools --><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="#ffffff" role="img" preserveAspectRatio="xMidYMid meet">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
 
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-
-<g id="SVGRepo_iconCarrier">
-
-<title>LibreOffice icon</title>
-
-<path d="M16.365 0a.597.597 0 00-.555.352.582.582 0 00.128.635l4.985 4.996a.605.605 0 00.635.133.59.59 0 00.363-.53V.577A.605.605 0 0021.335 0zM2.661 0a.59.59 0 00-.582.59v22.82a.59.59 0 00.582.59h18.67a.59.59 0 00.59-.59V8.716a.59.59 0 00-.17-.42L13.674.182a.59.59 0 00-.42-.181zm.59 1.184h9.754l7.733 7.77v13.863H3.251z"/>
-
-</g>
-
+<svg
+   fill="#ffffff"
+   width="514.68463"
+   height="622.54126"
+   viewBox="0 0 15.440539 18.676238"
+   role="img"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="libreoffice.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.00875"
+     inkscape:cx="254.27509"
+     inkscape:cy="326.64188"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <g
+     id="SVGRepo_bgCarrier"
+     stroke-width="0"
+     transform="matrix(0.38997717,0,0,0.38997717,1.3899811,4.4692012)" />
+  <g
+     id="SVGRepo_tracerCarrier"
+     stroke-linecap="round"
+     stroke-linejoin="round"
+     transform="matrix(0.38997717,0,0,0.38997717,1.3899811,4.4692012)" />
+  <g
+     id="SVGRepo_iconCarrier"
+     transform="matrix(0.38997717,0,0,0.38997717,1.3899811,4.4692012)">
+    <title
+       id="title1">LibreOffice icon</title>
+    <path
+       d="m 16.365,0 a 0.597,0.597 0 0 0 -0.555,0.352 0.582,0.582 0 0 0 0.128,0.635 l 4.985,4.996 a 0.605,0.605 0 0 0 0.635,0.133 0.59,0.59 0 0 0 0.363,-0.53 V 0.577 A 0.605,0.605 0 0 0 21.335,0 Z M 2.661,0 A 0.59,0.59 0 0 0 2.079,0.59 V 23.41 A 0.59,0.59 0 0 0 2.661,24 h 18.67 a 0.59,0.59 0 0 0 0.59,-0.59 V 8.716 a 0.59,0.59 0 0 0 -0.17,-0.42 L 13.674,0.182 a 0.59,0.59 0 0 0 -0.42,-0.181 z m 0.59,1.184 h 9.754 l 7.733,7.77 V 22.817 H 3.251 Z"
+       id="path1" />
+  </g>
 </svg>
