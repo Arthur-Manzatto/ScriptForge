@@ -176,3 +176,21 @@ h2{
 .app-card .custom-control-input:checked ~ .custom-control-label::after {
     transform: translateY(-50%) translateX(1.3rem) !important;
 }
+
+.floating-box {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: none;
+
+  width: 80%;
+  height: 20%;
+  z-index: 10;
+  
+  background: #0D0B1A;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}

@@ -18,7 +18,7 @@ const apps_dev = [
   { id: "neovim",      name: "Neovim",          logo: "name/neovim" },
   { id: "go",          name: "Go",              logo: "name/go" },
   { id: "rust",        name: "Rust",            logo: "name/rust" },
-  { id: "java",        name: "Java JDK",      logo: "java.com" },
+  { id: "java",        name: "Java JDK",        logo: "java.com" },
   { id: "php",         name: "PHP",             logo: "name/php" },
   { id: "postgresql",  name: "PostgreSQL",      logo: "name/postgresql" },
   { id: "mysql",       name: "MySQL",           logo: "name/mysql" },
@@ -74,7 +74,7 @@ function renderApps(apps, sectionId) {
     document.getElementById(sectionId).innerHTML += `
     <div class="app-card col-md-2">
         <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="${app.id}" value="${app.id}">
+            <input type="checkbox" class="custom-control-input" id="${app.id}" value="${app.id}" onchange="switch_clicked(this)">
                 <label class="custom-control-label" for="${app.id}">
                 </label>
         </div>
@@ -92,24 +92,41 @@ renderApps(apps_multimedia,    "multimedia-section");
 renderApps(apps_security,      "security-section");
 renderApps(apps_communication, "communication-section");
 
+let selected = []
+
+function switch_clicked(element){
+  const value = element.value;
+
+  if (element.checked) {
+    selected.push(value);
+  } else {
+    selected = selected.filter(item => item !== value);
+  }
+
+  console.log(selected);
+    // document.querySelectorAll(".custom-control-input").forEach(app => {
+    //     if(app.checked){
+    //       selected.push(app.value)
+    //       document.getElementById("confirm-generation").style.display = "block"
+    //     }else{
+    //       selected.pop(app.value)
+    //       document.getElementById("confirm-generation").style.display = "none"
+    //     }
+    // })
+    
+    // let script = "sudo snap install"
+
+    // selected.forEach(appSelected => {
+    //     if(appSelected == "spotify"){
+    //         script += " spotify"
+    //     }else if(appSelected == "vscode"){
+    //         script += " code --classic"
+    //     }
+    // })
+    // console.log(script)
+}
+
 function generate(){
-    let selected = []
-
-    document.querySelectorAll(".custom-control-input").forEach(app => {
-        if(app.checked){
-            selected.push(app.value)
-        }
-    })
-    console.log(selected)
-    let script = "sudo snap install"
-
-    selected.forEach(appSelected => {
-        if(appSelected == "spotify"){
-            script += " spotify"
-        }else if(appSelected == "vscode"){
-            script += " code --classic"
-        }
-    })
-    console.log(script)
+    
 
 }
