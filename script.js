@@ -135,6 +135,7 @@ let selected = []
 
 function switch_clicked(element){
   const value = element.value;
+  const confirm_div = document.getElementById("confirm-generation")
 
   if (element.checked) {
     selected.push(value);
@@ -142,16 +143,17 @@ function switch_clicked(element){
     selected = selected.filter(item => item !== value);
   }
 
+  confirm_div.innerHTML = `<p>Number of Apps Selected: ${selected.length}</p>`
+  confirm_div.innerHTML += `<p>Apps Selected: ${selected}</p>`
+
+
+  if(selected.length == 0){
+    confirm_div.style.display = "none"
+  }else{
+    confirm_div.style.display = "block"
+  }
+
   console.log(selected);
-    // document.querySelectorAll(".custom-control-input").forEach(app => {
-    //     if(app.checked){
-    //       selected.push(app.value)
-    //       document.getElementById("confirm-generation").style.display = "block"
-    //     }else{
-    //       selected.pop(app.value)
-    //       document.getElementById("confirm-generation").style.display = "none"
-    //     }
-    // })
     
     // let script = "sudo snap install"
 
