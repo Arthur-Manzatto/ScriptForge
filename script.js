@@ -107,10 +107,10 @@ const apps_system = [
 function renderApps(apps, sectionId) {
   apps.forEach(app => {
     document.getElementById(sectionId).innerHTML += `
-    <div class="app-card col-md-2">
+    <div class="app-card col-md-2" onclick="document.getElementById('${app.id}').click()">
         <div class="custom-control custom-switch">
             <input type="checkbox" class="custom-control-input" id="${app.id}" value="${app.id}">
-                <label class="custom-control-label" for="${app.id}">
+                <label class="custom-control-label" >
                 </label>
         </div>
         <span class="text-white ">${app.name}</span>
