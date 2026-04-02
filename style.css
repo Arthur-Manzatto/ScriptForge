@@ -176,3 +176,52 @@ h2{
 .app-card .custom-control-input:checked ~ .custom-control-label::after {
     transform: translateY(-50%) translateX(1.3rem) !important;
 }
+
+#rodape{
+    background-color: #0D0B1A;
+    margin-top: 40px;
+    padding-top: 80px;
+    height: 60%;
+}
+
+#rodape h3{
+    color:#a78bfa;
+    text-align: center;
+}
+#rodape hr{
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 20px 0;
+}
+
+.card-dev {
+    background: rgba(255, 255, 255, 0.04);
+    border: 0.5px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.avatar {
+    width: 65px;
+    height: 48px;
+   margin-bottom: 42px;
+ 
+}
+
+.dev-nome { 
+    color: #e8e6ff;
+    font-size: 15px;
+ }
+
+.dev-github {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}
+
+#rodape span a{
+    text-decoration: none;
+}
+#rodape span a:hover{
+    text-decoration: none;
+    color: #a78bfa;
+}
