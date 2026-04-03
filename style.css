@@ -10,7 +10,7 @@ html,body{
     padding-top: 60px;
 }
 #home{
-    height: 40%;
+    height: 60%;
 }
 nav.nav-custom{
     background: #0D0B1A;
@@ -179,9 +179,9 @@ h2{
 
 #rodape{
     background-color: #0D0B1A;
-    margin-top: 40px;
-    padding-top: 80px;
-    height: 60%;
+    margin-top: 30px;
+    padding: 40px 0 20px;
+    position: relative;
 }
 
 #rodape h3{
@@ -191,7 +191,7 @@ h2{
 #rodape hr{
     border: none;
     border-top: 1px solid rgba(255, 255, 255, 0.12);
-    margin: 20px 0;
+    margin-top: 5px;
 }
 
 .card-dev {
@@ -213,7 +213,7 @@ h2{
  }
 
 .dev-github {
-    font-size: 14px;
+    font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
 }
@@ -224,4 +224,52 @@ h2{
 #rodape span a:hover{
     text-decoration: none;
     color: #a78bfa;
+}
+
+.floating-box{
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    transform: translateX(-50%);
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+
+    display: none;
+    width: 80%;
+    height: 20%;
+    width: 10vw;
+    height: 70vh;
+    z-index: 10;
+    background: #0D0B1A;
+}
+
+#home h3{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0 20px 0;
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);  
+  border-radius: 14px;
+  color: #cdd8e6;
+  height: 45px;
+  font-size: 17px;
+  
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.04);
+  color: #cdd8e6;
+  border-color: #4a7ab5;
+  box-shadow: 0 0 0 3px rgba(74, 122, 181, 0.25);
+}
+
+.form-control option {
+  background-color: #0D0B1A;
+  color: #cdd8e6;
 }
