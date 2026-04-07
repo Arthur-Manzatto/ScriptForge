@@ -273,3 +273,16 @@ h2{
   background-color: #0D0B1A;
   color: #cdd8e6;
 }
+
+.btn-fixed {
+  position: fixed;
+  top: 20vh; /* altura da navbar */
+  height: 10vh;;
+  width: 3vw;
+  z-index: 999;
+}
+
+
+#confirm-generation {
+  display: none;
+}

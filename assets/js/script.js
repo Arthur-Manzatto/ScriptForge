@@ -144,7 +144,7 @@ function switch_clicked(element){
   }
 
   confirm_div.innerHTML = `<p>Number of Apps Selected: ${selected.length}</p>`
-  confirm_div.innerHTML += `<p>Apps Selected: ${selected}</p>`
+  confirm_div.innerHTML += `<ul>${selected.map(item => `<li>${item}</li>`).join('')}</ul>`
 
 
   if(selected.length == 0){
@@ -166,6 +166,15 @@ function switch_clicked(element){
     // })
     // console.log(script)
 }
+
+document.getElementById('btn-confirm').addEventListener('click', function() {
+  const div = document.getElementById('confirm-generation');
+  if(div.style.display === 'none' || div.style.display === '') {
+    div.style.display = 'block';
+  } else {
+    div.style.display = 'none';
+  }
+});
 
 function generate(){
     
