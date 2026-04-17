@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 14/04/2026 às 14:59
+-- Tempo de geração: 17/04/2026 às 04:03
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -124,15 +124,15 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id_cat`, `name_cat`, `slug_cat`, `active_cat`) VALUES
-(1, 'Navegadores', 'browsers', 1),
-(2, 'Desenvolvimento', 'dev', 1),
-(3, 'Produtividade', 'productivity', 1),
-(4, 'Multimídia', 'multimedia', 1),
-(5, 'Segurança', 'security', 1),
-(6, 'Comunicação', 'communication', 1),
-(7, 'Utilitários', 'utilities', 1),
+(1, 'Browsers', 'browsers', 1),
+(2, 'Development', 'dev', 1),
+(3, 'Productivity', 'productivity', 1),
+(4, 'Multimedia', 'multimedia', 1),
+(5, 'Security', 'security', 1),
+(6, 'Communication', 'communication', 1),
+(7, 'Utilities', 'utilities', 1),
 (8, 'Gaming', 'gaming', 1),
-(9, 'Sistema', 'system', 1);
+(9, 'System', 'system', 1);
 
 -- --------------------------------------------------------
 
