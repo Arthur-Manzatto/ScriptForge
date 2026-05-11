@@ -68,6 +68,7 @@ comboBox_distro.addEventListener("change", function() {
   selectAdistro(this.value);
 });
 
+var current_distro;
 function selectAdistro(selected_id){
   $.ajax({
     url: '../backend/get_distros.php',
@@ -77,12 +78,17 @@ function selectAdistro(selected_id){
       selected_distro: selected_id
     },
     success: function(data) {
+      current_distro = data[0].name_distro;
       console.log("SUCESSO:", data);
+      document.getElementById("numbers-selected-apps").innerHTML = `<p>Your Selected Distro: ${current_distro}</p>`
+      
     },
     error: function(xhr) {
       console.log("ERRO:", xhr.responseText);
     }
   })
+  
+
 }
 
 
@@ -101,8 +107,7 @@ function switch_clicked(element) {
     selected = selected.filter(item => item !== value);
   }
 
-  confirm_div.innerHTML = `<p>Your Selected Apps: ${selected.length}</p>`
-  confirm_div.innerHTML += `<p>Your Selected Distro: ${document.getElementById("select-distro").value}</p>`
+  confirm_div.innerHTML = `<p>Your Selected Distro: ${current_distro}</p>`
   apps_list.innerHTML = selected.map(item => `
   <li class="selected-item">
     ${item}
@@ -121,6 +126,7 @@ document.getElementById('floating-btn').addEventListener('click', function () {
 
   if (div.style.display === 'none' || div.style.display === '') {
     div.style.display = 'block';
+    
     floating_btn.innerHTML = "<i class='bi bi-arrow-left-square' style='font-size: x-large;'></i>"
 
   } else {
@@ -157,7 +163,18 @@ function removeItem(item, element) {
 
 function confirm_overlay() {
   document.getElementById("overlay-div").style.display = 'block';
+  console.log(selected)
+  
+  const overlay_apps = document.getElementById("overlay-apps");
+  const overlay_distro = document.getElementById("overlay-distro");
 
+  selected.forEach(app => {
+  overlay_apps.innerHTML += `
+    <p>${app}</p>
+    `;
+  })
+
+  overlay_distro.innerHTML = `<p>${current_distro}</p>`
   
 }
 
