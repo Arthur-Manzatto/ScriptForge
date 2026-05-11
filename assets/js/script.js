@@ -166,15 +166,16 @@ function confirm_overlay() {
   console.log(selected)
   
   const overlay_apps = document.getElementById("overlay-apps");
+  overlay_apps.innerHTML = "";
   const overlay_distro = document.getElementById("overlay-distro");
 
   selected.forEach(app => {
   overlay_apps.innerHTML += `
-    <p>${app}</p>
+    <div class="app-card col-md-2">${app}</div>
     `;
   })
 
-  overlay_distro.innerHTML = `<p>${current_distro}</p>`
+  overlay_distro.innerHTML += `<p class="distro_overlay">${current_distro}</p>`
   
 }
 

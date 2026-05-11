@@ -93,27 +93,23 @@
  
     <div id="overlay-div" class="overlay-div d-flex justify-content-center align-items-center ">
         <div class="script-section">
-            <button class="btn btn-success btn-overlay" onclick="exit()">
+            <button class="btn btn-success btn-overlay" style="z-index: 999;" onclick="exit()">
                 <i class="bi bi-arrow-left-circle " style="font-size: x-large;  "></i>
             </button>
             <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 mt-3 ">
+                        <h1 class="text-dark h1-overlay">Script Apps</h1> 
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <div id="overlay-distro" class="div_distro text-dark "></div>
+                    </div>
+                </div>
                 <div class="row">
-                    <div class="col-md-12">
-                        <div>
-                            <h1 class="text-dark text-center mt-3">Selected Distro and Apps</h1>
-                        </div>
-                        <div id="overlay-distro"><!--distro-->
-                           
-                        </div>
-                        <div id="overlay-apps"> <!--apps-->
+                    <div id="overlay-apps">
 
-                        </div>
-                        <div><!--script-->
-
-                        </div>
-                        <div> <!--btn-baixar-->
-
-                        </div>
                     </div>
                 </div>
             </div>
