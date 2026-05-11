@@ -426,7 +426,7 @@ h2{
 }
 
 
-.div_distro{
+/*.div_distro{
     margin: 0;
     padding: 0;
     font-size: 20px;
@@ -434,4 +434,70 @@ h2{
 }
 .h1-overlay{
     margin-left: 32px;
+}*/
+
+.overlay-header{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    padding: 12px 20px;
+}
+
+.header-side{
+    display: flex;
+    align-items: center;
+}
+
+.header-side.left{
+    justify-content: flex-start;
+}
+
+.header-side.right{
+    justify-content: flex-end;
+}
+
+.header-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h1-overlay{
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.btn-overlay i{
+    font-size: 1.8rem;
+}
+
+.div_distro{
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px){
+
+    .overlay-header{
+        grid-template-columns: 1fr;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .header-side.left,
+    .header-side.right,
+    .header-center{
+        justify-content: center;
+    }
+
+    .div_distro{
+        text-align: center;
+    }
+
+    .h1-overlay{
+        font-size: 1.6rem;
+    }
 }
