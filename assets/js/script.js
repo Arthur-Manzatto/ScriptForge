@@ -157,6 +157,8 @@ function removeItem(item, element) {
 
 function confirm_overlay() {
   document.getElementById("overlay-div").style.display = 'block';
+
+  
 }
 
 function exit() {
