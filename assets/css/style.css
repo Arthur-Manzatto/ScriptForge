@@ -325,6 +325,7 @@ h2{
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   width: 4px;
+  height: 4px; /* espessura da barra horizontal */
 }
 
 ::-webkit-scrollbar-track {
@@ -426,17 +427,6 @@ h2{
     background: rgba(167, 139, 250, 0.6);
     border-radius: 50%;
 }
-
-
-/*.div_distro{
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    margin-left: 150px; 
-}
-.h1-overlay{
-    margin-left: 32px;
-}*/
 
 .overlay-header{
     display: grid;

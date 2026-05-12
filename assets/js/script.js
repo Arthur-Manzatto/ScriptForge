@@ -184,3 +184,14 @@ function confirm_overlay() {
 function exit() {
   document.getElementById("overlay-div").classList.remove("ativo");
 }
+
+const overlaySection = document.querySelector('.overlay-custom-section');
+
+overlaySection.addEventListener('wheel', (e) => {
+    e.preventDefault();
+
+    overlaySection.scrollBy({
+        left: e.deltaY * 2,
+        behavior: 'smooth'
+    });
+}, { passive: false });
