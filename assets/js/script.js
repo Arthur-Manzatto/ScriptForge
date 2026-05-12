@@ -162,7 +162,7 @@ function removeItem(item, element) {
 }
 
 function confirm_overlay() {
-  document.getElementById("overlay-div").style.display = 'block';
+  document.getElementById("overlay-div").style.display = 'flex';
   console.log(selected)
   
   const overlay_apps = document.getElementById("overlay-apps");
@@ -170,12 +170,14 @@ function confirm_overlay() {
   const overlay_distro = document.getElementById("overlay-distro");
 
   selected.forEach(app => {
-  overlay_apps.innerHTML += `
-    <div class="app-card col-md-2">${app}</div>
+  overlay_apps.innerHTML += ` 
+  
+  <div class="overlay-app-card" ><img src="../assets/img/${app}.svg" class="img-fluid" style="max-width: 100px;" alt="${app} logo"/> ${app}</div>
+    
     `;
   })
 
-  overlay_distro.innerHTML += `<p class="distro_overlay">${current_distro}</p>`
+  overlay_distro.innerHTML = `<p class="distro_overlay">${current_distro}</p>`
   
 }
 
