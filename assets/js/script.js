@@ -195,3 +195,18 @@ overlaySection.addEventListener('wheel', (e) => {
         behavior: 'smooth'
     });
 }, { passive: false });
+
+function copyScript() {
+
+    const script = document.getElementById("script-content").innerText;
+
+    navigator.clipboard.writeText(script);
+
+    const btn = document.querySelector(".copy-btn");
+
+    btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+
+    setTimeout(() => {
+        btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+    }, 1500);
+}
