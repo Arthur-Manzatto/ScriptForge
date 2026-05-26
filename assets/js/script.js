@@ -95,10 +95,12 @@ comboBox_distro.addEventListener("change", function () {
 var current_distro;
 var current_distro_id = null;
 function selectAdistro(selected_id) {
+
   current_distro_id = selected_id;
   const selected_option = comboBox_distro.options[comboBox_distro.selectedIndex];
   current_distro = selected_option ? selected_option.text : '';
   document.getElementById("numbers-selected-apps").innerHTML = `<p>Your Selected Distro: ${current_distro}</p>`
+  btn.style.display = 'block';
 
 }
 
