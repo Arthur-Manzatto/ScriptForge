@@ -9,6 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
+
+
+/*
+|--------------------------------------------------------------------------
+| ORIGINAL CODE
+|--------------------------------------------------------------------------
+*/
+
 if (!isset($_POST['selected_distro']) || !isset($_POST['selected_apps'])) {
     http_response_code(400);
     echo json_encode(["error" => "Missing selected_distro or selected_apps"]);
@@ -39,7 +47,7 @@ if (count($selected_apps) === 0) {
     exit;
 }
 
-$distro_stmt = $conn->prepare("SELECT id_distro, name_distro, install_method
+$distro_stmt = $conn->prepare("SELECT id_distro, name_distro, install_method, slug_distro
                                FROM distros
                                WHERE id_distro = ? AND active_distro = 1");
 
@@ -53,6 +61,7 @@ if (!$distro) {
     echo json_encode(["error" => "Distro not found"]);
     exit;
 }
+
 
 $placeholders = implode(',', array_fill(0, count($selected_apps), '?'));
 $types = 'i' . str_repeat('s', count($selected_apps));
@@ -70,11 +79,13 @@ function bind_dynamic_params($stmt, $types, $params)
 {
     $bind_names = [];
     $bind_names[] = $types;
+
     for ($i = 0; $i < count($params); $i++) {
         $bind_name = 'bind' . $i;
         $$bind_name = $params[$i];
         $bind_names[] = &$$bind_name;
     }
+
     call_user_func_array([$stmt, 'bind_param'], $bind_names);
 }
 
@@ -89,6 +100,7 @@ $apps = [];
 
 while ($row = $apps_result->fetch_assoc()) {
     $apps[] = $row;
+
     if (!in_array($row['name_pack'], $packages, true)) {
         $packages[] = $row['name_pack'];
     }

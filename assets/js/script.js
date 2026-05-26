@@ -56,21 +56,45 @@ $.ajax({
   url: '../backend/get_distros.php',
   method: 'GET',
   dataType: 'json',
-  success: function (data){
+  success: function (response) {
+
+    const data = response.distros;
+
     data.forEach(distro => {
-      comboBox_distro.innerHTML += `<option value="${distro.id_distro}">${distro.name_distro}</option>` 
-    })
-    
+
+      comboBox_distro.innerHTML += `
+            <option value="${distro.id_distro}">
+                ${distro.name_distro}
+            </option>
+        `;
+
+      if (response.detected_distro) {
+
+        if (distro.slug_distro === response.detected_distro) {
+
+          comboBox_distro.value = distro.id_distro;
+
+          selectAdistro(distro.id_distro);
+        }
+      }
+    });
+
+
+    if (response.warning) {
+
+      showErrorPopup(response.warning.message);
+    }
   }
+
 })
 
-comboBox_distro.addEventListener("change", function() {
+comboBox_distro.addEventListener("change", function () {
   selectAdistro(this.value);
 });
 
 var current_distro;
 var current_distro_id = null;
-function selectAdistro(selected_id){
+function selectAdistro(selected_id) {
   current_distro_id = selected_id;
   const selected_option = comboBox_distro.options[comboBox_distro.selectedIndex];
   current_distro = selected_option ? selected_option.text : '';
@@ -115,7 +139,7 @@ document.getElementById('floating-btn').addEventListener('click', function () {
 
   if (div.style.display === 'none' || div.style.display === '') {
     div.style.display = 'block';
-    
+
     floating_btn.innerHTML = "<i class='bi bi-arrow-left-square' style='font-size: x-large;'></i>"
 
   } else {
@@ -148,17 +172,17 @@ function removeItem(item) {
 
 function confirm_overlay() {
   if (!current_distro_id) {
-    alert('Selecione uma distro antes de gerar o script.');
+    showErrorPopup('Selecione uma distro antes de gerar o script.');
     return;
   }
 
   if (selected.length === 0) {
-    alert('Selecione pelo menos um app para gerar o script.');
+    showErrorPopup('Selecione pelo menos um app para gerar o script.');
     return;
   }
 
   overlay.classList.add("ativo");
-  
+
   const overlay_apps = document.getElementById("overlay-apps");
   overlay_apps.innerHTML = "";
   const overlay_distro = document.getElementById("overlay-distro");
@@ -168,7 +192,7 @@ function confirm_overlay() {
   script_content.innerText = "Gerando script...";
 
   selected.forEach(app => {
-  overlay_apps.innerHTML += ` 
+    overlay_apps.innerHTML += ` 
   
   <div class="overlay-app-card" ><img src="../assets/img/${app}.svg" class="img-fluid" style="max-width: 100px;" alt="${app} logo"/> ${app}</div>
     
@@ -185,20 +209,42 @@ function confirm_overlay() {
       selected_distro: current_distro_id,
       selected_apps: selected
     },
-    success: function(response) {
+    success: function (response) {
+
       generated_script = response.script || '';
       script_content.innerText = response.script;
+
+      const warningBox = document.getElementById("overlay-warning");
+
+      if (response.warning) {
+
+        warningBox.style.display = "block";
+        warningBox.innerText = response.warning.message;
+
+      } else {
+
+        warningBox.style.display = "none";
+        warningBox.innerText = "";
+      }
+
     },
-    error: function(xhr) {
+    error: function (xhr) {
+
       generated_script = '';
+
       let message = 'Nao foi possivel gerar o script.';
+
       if (xhr.responseJSON && xhr.responseJSON.error) {
         message = xhr.responseJSON.error;
       }
-      script_content.innerText = message;
+
+      showErrorPopup(message);
+
+      script_content.innerText = '';
+
     }
   });
-  
+
 }
 
 function exit() {
@@ -208,27 +254,27 @@ function exit() {
 const overlaySection = document.querySelector('.overlay-custom-section');
 
 overlaySection.addEventListener('wheel', (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    overlaySection.scrollBy({
-        left: e.deltaY * 2,
-        behavior: 'smooth'
-    });
+  overlaySection.scrollBy({
+    left: e.deltaY * 2,
+    behavior: 'smooth'
+  });
 }, { passive: false });
 
 function copyScript() {
 
-    const script = document.getElementById("script-content").innerText;
+  const script = document.getElementById("script-content").innerText;
 
-    navigator.clipboard.writeText(script);
+  navigator.clipboard.writeText(script);
 
-    const btn = document.querySelector(".copy-btn");
+  const btn = document.querySelector(".copy-btn");
 
-    btn.innerHTML = '<i class="bi bi-check-lg"></i>';
+  btn.innerHTML = '<i class="bi bi-check-lg"></i>';
 
-    setTimeout(() => {
-        btn.innerHTML = '<i class="bi bi-clipboard"></i>';
-    }, 1500);
+  setTimeout(() => {
+    btn.innerHTML = '<i class="bi bi-clipboard"></i>';
+  }, 1500);
 }
 
 function sanitizeFilePart(value) {
@@ -242,7 +288,7 @@ function sanitizeFilePart(value) {
 
 function downloadScriptFile() {
   if (!generated_script) {
-    alert('Gere o script antes de baixar.');
+    showErrorPopup('Gere o script antes de baixar.');
     return;
   }
 
@@ -266,4 +312,30 @@ function downloadScriptFile() {
 const download_btn = document.getElementById('btn-download-script');
 if (download_btn) {
   download_btn.addEventListener('click', downloadScriptFile);
+}
+
+
+
+function showErrorPopup(message) {
+
+  const popup = document.createElement("div");
+
+  popup.className = "error-popup";
+  popup.innerText = message;
+
+  document.body.appendChild(popup);
+
+  setTimeout(() => {
+    popup.classList.add("show");
+  }, 10);
+
+  setTimeout(() => {
+
+    popup.classList.remove("show");
+
+    setTimeout(() => {
+      popup.remove();
+    }, 300);
+
+  }, 4000);
 }
