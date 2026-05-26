@@ -341,3 +341,29 @@ function showErrorPopup(message) {
 
   }, 4000);
 }
+
+
+
+function generateInstaller(){
+
+    if (!current_distro_id) {
+        showErrorPopup('Select a distro first.');
+        return;
+    }
+
+    if (selected.length === 0) {
+        showErrorPopup('Select at least one app.');
+        return;
+    }
+
+    const params = new URLSearchParams();
+
+    params.append('selected_distro', current_distro_id);
+
+    selected.forEach(app => {
+        params.append('selected_apps[]', app);
+    });
+
+    window.location.href =
+        '../backend/generate_installer.php?' + params.toString();
+}
