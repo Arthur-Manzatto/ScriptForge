@@ -69,39 +69,28 @@ comboBox_distro.addEventListener("change", function() {
 });
 
 var current_distro;
+var current_distro_id = null;
 function selectAdistro(selected_id){
-  $.ajax({
-    url: '../backend/get_distros.php',
-    method: 'POST',
-    dataType: 'json',
-    data: {
-      selected_distro: selected_id
-    },
-    success: function(data) {
-      current_distro = data[0].name_distro;
-      console.log("SUCESSO:", data);
-      document.getElementById("numbers-selected-apps").innerHTML = `<p>Your Selected Distro: ${current_distro}</p>`
-      
-    },
-    error: function(xhr) {
-      console.log("ERRO:", xhr.responseText);
-    }
-  })
-  
+  current_distro_id = selected_id;
+  const selected_option = comboBox_distro.options[comboBox_distro.selectedIndex];
+  current_distro = selected_option ? selected_option.text : '';
+  document.getElementById("numbers-selected-apps").innerHTML = `<p>Your Selected Distro: ${current_distro}</p>`
 
 }
 
 
 let selected = []
+let generated_script = '';
 
 function switch_clicked(element) {
   const value = element.value;
   const confirm_div = document.getElementById("numbers-selected-apps")
   const apps_list = document.getElementById("apps-list")
-  const floating_btn = document.getElementById("floating-btn");
 
   if (element.checked) {
-    selected.push(value);
+    if (!selected.includes(value)) {
+      selected.push(value);
+    }
 
   } else {
     selected = selected.filter(item => item !== value);
@@ -111,7 +100,7 @@ function switch_clicked(element) {
   apps_list.innerHTML = selected.map(item => `
   <li class="selected-item">
     ${item}
-    <i class="bi bi-x-lg " onclick="removeItem('${item}',${element.id.value})"></i>
+    <i class="bi bi-x-lg " onclick="removeItem('${item}')"></i>
   </li>
   `).join('');
 
@@ -138,18 +127,14 @@ document.getElementById('floating-btn').addEventListener('click', function () {
 const btn = document.getElementById("floating-btn");
 const box = document.getElementById("confirm-generation");
 const overlay = document.querySelector(".overlay-div");
-const btnConfirm = document.getElementById("btn-confirm")
 
 btn.addEventListener("click", () => {
   box.classList.toggle("ativo");
   btn.classList.toggle("ativo");
 
 });
-btnConfirm.addEventListener("click", () => {
-  overlay.classList.toggle("ativo");
-})
 
-function removeItem(item, element) {
+function removeItem(item) {
 
   selected = selected.filter(i => i !== item);
 
@@ -162,12 +147,25 @@ function removeItem(item, element) {
 }
 
 function confirm_overlay() {
-  document.getElementById("overlay-div").style.display = 'flex';
-  console.log(selected)
+  if (!current_distro_id) {
+    alert('Selecione uma distro antes de gerar o script.');
+    return;
+  }
+
+  if (selected.length === 0) {
+    alert('Selecione pelo menos um app para gerar o script.');
+    return;
+  }
+
+  overlay.classList.add("ativo");
   
   const overlay_apps = document.getElementById("overlay-apps");
   overlay_apps.innerHTML = "";
   const overlay_distro = document.getElementById("overlay-distro");
+  const script_content = document.getElementById("script-content");
+
+  generated_script = '';
+  script_content.innerText = "Gerando script...";
 
   selected.forEach(app => {
   overlay_apps.innerHTML += ` 
@@ -178,6 +176,28 @@ function confirm_overlay() {
   })
 
   overlay_distro.innerHTML = `<p class="distro_overlay">${current_distro}</p>`
+
+  $.ajax({
+    url: '../backend/get_script.php',
+    method: 'POST',
+    dataType: 'json',
+    data: {
+      selected_distro: current_distro_id,
+      selected_apps: selected
+    },
+    success: function(response) {
+      generated_script = response.script || '';
+      script_content.innerText = response.script;
+    },
+    error: function(xhr) {
+      generated_script = '';
+      let message = 'Nao foi possivel gerar o script.';
+      if (xhr.responseJSON && xhr.responseJSON.error) {
+        message = xhr.responseJSON.error;
+      }
+      script_content.innerText = message;
+    }
+  });
   
 }
 
@@ -209,4 +229,41 @@ function copyScript() {
     setTimeout(() => {
         btn.innerHTML = '<i class="bi bi-clipboard"></i>';
     }, 1500);
+}
+
+function sanitizeFilePart(value) {
+  return (value || 'linux')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
+
+function downloadScriptFile() {
+  if (!generated_script) {
+    alert('Gere o script antes de baixar.');
+    return;
+  }
+
+  const distro_name = sanitizeFilePart(current_distro);
+  const date_str = new Date().toISOString().slice(0, 10);
+  const filename = `scriptforge-${distro_name || 'linux'}-${date_str}.sh`;
+
+  const blob = new Blob([generated_script + '\n'], { type: 'text/x-shellscript;charset=utf-8' });
+  const download_url = URL.createObjectURL(blob);
+
+  const link = document.createElement('a');
+  link.href = download_url;
+  link.download = filename;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+
+  URL.revokeObjectURL(download_url);
+}
+
+const download_btn = document.getElementById('btn-download-script');
+if (download_btn) {
+  download_btn.addEventListener('click', downloadScriptFile);
 }
