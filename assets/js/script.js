@@ -174,12 +174,12 @@ function removeItem(item) {
 
 function confirm_overlay() {
   if (!current_distro_id) {
-    showErrorPopup('Selecione uma distro antes de gerar o script.');
+    showErrorPopup('Select a distro before generating the script.');
     return;
   }
 
   if (selected.length === 0) {
-    showErrorPopup('Selecione pelo menos um app para gerar o script.');
+    showErrorPopup('Select at least one app to generate the script.');
     return;
   }
 
@@ -290,7 +290,7 @@ function sanitizeFilePart(value) {
 
 function downloadScriptFile() {
   if (!generated_script) {
-    showErrorPopup('Gere o script antes de baixar.');
+    showErrorPopup('Generate the script before downloading.');
     return;
   }
 
